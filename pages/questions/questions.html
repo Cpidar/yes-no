@@ -1,0 +1,109 @@
+<!--
+  Generated template for the Questions page.
+
+  See http://ionicframework.com/docs/v2/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+    <ion-navbar color="dark">
+        <ion-title>{{questNo}} سوال</ion-title>
+    </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding class="home">
+    <ion-grid>
+        <ion-row align-items-stretch justify-content-center>
+            <ion-col col-sm-8 align-self-center>
+                <ion-card class="quest-card" side="left">
+                    <ion-card-header>
+                        <div *ngIf="currentQuest">
+                            <h2 ion-text color="dark" style="text-align: center">
+                                {{currentQuest.question}}
+                            </h2>
+                        </div>
+                    </ion-card-header>
+                    <ion-card-content>
+                        <ion-grid>
+                            <ion-row justify-content-center align-items-center class="quest-row">
+                                <ion-col col-8 col-sm class="col-chart">
+                                    <canvas #doughnutCanvas1 class="doughnut" [hidden]="!hidden"></canvas>
+                                    <button ion-button (click)="onyes()" class="btn-btn" [hidden]="hidden" [@questOpt]="hidden">بله</button>
+                                </ion-col>
+                                <ion-col col-8 col-sm class="col-chart">
+                                    <canvas #doughnutCanvas2 class="doughnut" [hidden]="!hidden"></canvas>
+                                    <button ion-button (click)="onno()" class="btn-btn" color="secondary" [hidden]="hidden" [@questOpt]="hidden">خیر</button>
+                                </ion-col>
+                            </ion-row>
+                        </ion-grid>
+                        <ion-card-content>
+                            <button ion-button block (click)="nextQuest()">سوال بعدی</button>
+                        </ion-card-content>
+                    </ion-card-content>
+                </ion-card>
+            </ion-col>
+        </ion-row>
+    </ion-grid>
+
+    <!--<ion-grid >
+        <ion-row align-items-stretch>
+            <ion-col align-self-center>
+                <ion-card class="quest-card">
+                    <ion-card-content>
+                        <ion-grid>
+                            <ion-row justify-content-center align-items-center class="quest-row">
+                                <ion-col col-12 class="col-quest">
+                                    <div *ngIf="currentQuest">
+                                        <h2 ion-text color="primary">
+                                            {{currentQuest.question}}
+                                        </h2>
+                                    </div>
+                                </ion-col>
+                                <ion-col col-8 col-sm class="col-chart">
+                                    <canvas #doughnutCanvas1 class="doughnut"></canvas>
+                                </ion-col>
+                                <ion-col col-8 col-sm class="col-chart">
+                                    <canvas #doughnutCanvas2 class="doughnut"></canvas>
+                                </ion-col>
+                            </ion-row>
+                        </ion-grid>
+                    </ion-card-content>
+                    <ion-card-content>
+                        <button ion-button block (click)="nextQuest()">سوال بعدی</button>
+                    </ion-card-content>
+                </ion-card>
+            </ion-col>
+        </ion-row>
+    </ion-grid>-->
+    <!--<ion-grid [hidden]="!hidden">
+        <ion-row align-items-stretch>
+            <ion-col align-self-center>
+                <ion-card class="quest-card" [@flyInOut]="hidden">
+                    <ion-grid>
+                        <ion-row justify-content-center align-items-center class="quest-row">
+                            <ion-col col-12 class="col-quest">
+                                <div *ngIf="currentQuest">
+                                    <h2 ion-text color="primary">
+                                        {{currentQuest.question}}
+                                    </h2>
+                                </div>
+                            </ion-col>
+                            <ion-col col-8 col-sm class="col-chart">
+                                <canvas #doughnutCanvas1 class="doughnut"></canvas>
+                            </ion-col>
+                            <ion-col col-8 col-sm class="col-chart">
+                                <canvas #doughnutCanvas2 class="doughnut"></canvas>
+                            </ion-col>
+                            <ion-col col-12 class="col-btn">
+                                <button ion-button block (click)="nextQuest()">سوال بعدی</button>
+                            </ion-col>
+                        </ion-row>
+                    </ion-grid>
+                </ion-card>
+            </ion-col>
+        </ion-row>
+    </ion-grid>-->
+
+</ion-content>

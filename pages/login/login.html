@@ -1,0 +1,20 @@
+<ion-content padding class="sex">
+    <ion-grid>
+        <ion-row align-items-stretch justify-content-center>
+            <ion-col align-self-center>
+                <ion-card class="login-card">
+                    <ion-card-header style="height:50px">
+                        <h2 ion-text color="dark" class="login-title">
+                            جنسیت خود را مشخص کنید
+                        </h2>
+                    </ion-card-header>
+                    <ion-card-content>
+                        <button ion-button block (click)="onyes()">مرد</button>
+
+                        <button ion-button block (click)="onno()">زن</button>
+                    </ion-card-content>
+                </ion-card>
+            </ion-col>
+        </ion-row>
+    </ion-grid>
+</ion-content>

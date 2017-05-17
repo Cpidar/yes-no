@@ -1,0 +1,36 @@
+page-home {
+    .home {
+        background: #3FB8AF;
+        //background: linear-gradient(to top, rgba(255, 0, 132, 1) 0%, rgba(140, 0, 75, 1) 100%);
+    }
+    .row-header {
+        height: 20%;
+    }
+    .row-play {
+        height: 70%;
+    }
+    .row-footer {
+        height: 10%;
+    }
+    .col-play {
+        display: flex;
+        justify-content: center;
+    }
+    ion-grid {
+        height: 100%
+    }
+    .btn-play {
+        width: 15rem;
+        height: 15rem;
+        background-color: #f7d969;
+        border: 20px solid #3D4045;
+        border-radius: 50%;
+        //box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+        color: #3D4045;
+        font-size: 4rem;
+        text-align: center;
+    }
+    .btn-icon {
+        margin-left: 10px
+    }
+}
